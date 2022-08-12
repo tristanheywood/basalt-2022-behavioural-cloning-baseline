@@ -67,7 +67,7 @@ async def main():
         os.makedirs(args.output_dir)
 
     # Colab kills the cell if we try to download too many simultaneously.
-    BLOCK_SIZE = 5
+    BLOCK_SIZE = 100
     for i in range(math.ceil(len(relpaths) / BLOCK_SIZE)):
 
         block = relpaths[i * BLOCK_SIZE : min(len(relpaths), (i + 1) * BLOCK_SIZE)]
