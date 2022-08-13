@@ -12,7 +12,9 @@ import cv2
 from openai_vpt.agent import ACTION_TRANSFORMER_KWARGS, resize_image, AGENT_RESOLUTION
 from openai_vpt.lib.actions import ActionTransformer
 
-QUEUE_TIMEOUT = 10
+# QUEUE_TIMEOUT = 10
+# Tristan: default value causes timeouts on colab.
+QUEUE_TIMEOUT = 1000
 
 CURSOR_FILE = os.path.join(os.path.dirname(__file__), "cursors", "mouse_cursor_white_16x16.png")
 
